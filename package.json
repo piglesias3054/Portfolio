@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "dev": "yarn",
+    "build": "yarn build",
+    "start": "yarn start",
+    "generate": "yarn generate"
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
