@@ -53,7 +53,8 @@
     <div id="closer1" class="contact_item">
       <img class="logo" src="../static/contact.png" alt="" />
     </div>
-    <span id="closer2" class="contact_item closerText">Thank you!</span>
+    <span id="closer2" class="contact_item closerText"><img src="../static/message2.gif" alt=""></span>
+
   </div>
 </template>
 
@@ -87,11 +88,16 @@ export default {
       })
       .addTo(controller);
   },
+
+  
 };
+
+
 </script>
 
 <style>
 .cv {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-align: left;
   padding-top: 10rem;
   display: flex;
@@ -126,8 +132,8 @@ export default {
 
 .closerText {
   margin-top: 20rem;
-  margin-bottom: 20rem;
-  max-width: 15rem;
+  margin-bottom: 15rem;
+  max-width: 20rem;
   font-style: normal;
   align-self: center;
   font-weight: 400;

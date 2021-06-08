@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div id="main" class="main">
     <div
       id="fadeIn"
       class="socials icons"
@@ -28,15 +28,18 @@
     <div class="container1">
       <span class="text1" id="slideTxt">
         Hey, I’m Paula!<br />
-        I’m a graphic designer and illustrator based in Madrid. I love
-        classic jazz and funk, pretty landscapes, and early internet
-        aesthetics.</span
+        I’m a graphic designer and illustrator based in Madrid. I love classic
+        jazz and funk, pretty landscapes, and early internet aesthetics.</span
       >
       <div id="fadeInHover" class="color"></div>
       <img class="illust" src="../static/2.jpg" alt="" />
     </div>
     <div class="container2">
       <span id="animate1">
+        <span id="message1" class="message1"
+          ><img src="../static/message1.gif" alt=""
+        /></span>
+        <div id="fadeInHover2" class="color2"></div>
         <Illust />
       </span>
     </div>
@@ -46,7 +49,10 @@
       /></span>
 
       <div class="box" id="slideTxt1">
-        <div class="text3_title">I love telling stories through my work, and conveying a sense of adventure!</div>
+        <div class="text3_title">
+          I love telling stories through my work, and conveying a sense of
+          adventure!
+        </div>
       </div>
     </div>
     <div class="container4">
@@ -74,8 +80,9 @@
     <div class="container7">
       <img id="fadeIn7" class="illust" src="../static/6.5.jpeg" alt="" />
       <span class="text6" id="slideTxt6">
-        Is able to create work in a variety of styles showing strong attention to
-        detail. <br> Understands architecture, has good awareness of city spaces and
+        Is able to create work in a variety of styles showing strong attention
+        to detail. <br />
+        Understands architecture, has good awareness of city spaces and
         countryside landscapes.</span
       >
     </div>
@@ -87,6 +94,8 @@
         <img id="fadeIn9" class="illust" src="../static/7.jpg" alt="" />
       </span>
     </div>
+    <div class="container9">
+    </div>
     <div class="closer">
       <Contact />
     </div>
@@ -97,9 +106,10 @@
 import Contact from "../components/Contact.vue";
 import Header from "../components/Header.vue";
 import Illust from "../components/Illust.vue";
+import Slide from "../components/Slide.vue";
 
 export default {
-  components: { Illust, Header, Contact },
+  components: { Illust, Header, Contact, Slide },
   mounted() {
     const controller = new this.$scrollmagic.Controller();
 
@@ -133,6 +143,7 @@ export default {
 
     var slideTxt = new this.$scrollmagic.Scene({
       triggerElement: ".container1",
+      triggerHook: "container2",
     })
 
       .setTween("#slideTxt", 3, {
@@ -145,12 +156,20 @@ export default {
     // CONTAINER 2
 
     var slideTxt = new this.$scrollmagic.Scene({
-      triggerElement: ".container3",
+      triggerElement: ".container2",
     })
 
+      .setTween("#message1", 3, {
+        scale: 1.1,
+        opacity: 1,
+      })
+      .addTo(controller);
+
+    var slideTxt = new this.$scrollmagic.Scene({
+      triggerElement: ".container3",
+    })
       .setTween("#slideTxt1", 3, {
         scale: 1.1,
-        right: 900,
         weight: 300,
         opacity: 1,
       })
@@ -163,13 +182,21 @@ export default {
       })
       .addTo(controller);
 
+    var scene = new this.$scrollmagic.Scene({
+      triggerElement: ".container3",
+    })
+      .setTween("#fadeIn2", 2, {
+        scale: 1,
+      })
+      .addTo(controller);
+
     // CONTAINER 3
 
     var fadeInHover2 = new this.$scrollmagic.Scene({
-      triggerElement: ".container3",
+      triggerElement: ".container2",
     })
       .setTween("#fadeInHover2", 3, {
-        opacity: 0.4,
+        opacity: 0.6,
       })
       .addTo(controller);
 
@@ -191,11 +218,29 @@ export default {
 
       .addTo(controller);
 
+    var scene = new this.$scrollmagic.Scene({
+      triggerElement: ".container3",
+    })
+      .setTween("#fadeIn3", 1, {
+        scale: 1.1,
+      })
+
+      .addTo(controller);
+
+    var scene = new this.$scrollmagic.Scene({
+      triggerElement: ".container4",
+    })
+      .setTween("#fadeIn3", 2, {
+        scale: 1,
+      })
+      .addTo(controller);
+
     // CONTAINER 4
 
     var slideTxt = new this.$scrollmagic.Scene({
       triggerElement: ".container4",
     })
+      .setClassToggle("#slideTxt2", "colorChange", 4)
       .setTween("#slideTxt2", 3, {
         scale: 1.1,
         right: 210,
@@ -216,6 +261,15 @@ export default {
       duration: 300,
     })
       .setPin("#animate3")
+      .addTo(controller);
+
+    var scene = new this.$scrollmagic.Scene({
+      triggerElement: ".container5",
+    })
+      .setTween("#fadeIn4", 2, {
+        scale: 1,
+      })
+
       .addTo(controller);
 
     // CONTAINER 5
@@ -246,6 +300,15 @@ export default {
       })
       .addTo(controller);
 
+    var scene = new this.$scrollmagic.Scene({
+      triggerElement: ".container6",
+    })
+      .setTween("#fadeIn5", 1, {
+        scale: 1,
+      })
+
+      .addTo(controller);
+
     // CONTAINER 6
 
     var fadein6 = new this.$scrollmagic.Scene({
@@ -266,6 +329,15 @@ export default {
       })
       .addTo(controller);
 
+    var scene = new this.$scrollmagic.Scene({
+      triggerElement: ".container7",
+    })
+      .setTween("#fadeIn6", 1, {
+        scale: 1,
+      })
+
+      .addTo(controller);
+
     // CONTAINER 7
 
     var slideTxt6 = new this.$scrollmagic.Scene({
@@ -284,6 +356,16 @@ export default {
       .setTween("#fadeIn7", 2, {
         scale: 1.1,
       })
+
+      .addTo(controller);
+
+    var scene = new this.$scrollmagic.Scene({
+      triggerElement: ".container8",
+    })
+      .setTween("#fadeIn7", 1, {
+        scale: 1,
+      })
+
       .addTo(controller);
 
     // CONTAINER 8
@@ -295,6 +377,17 @@ export default {
         scale: 1.1,
       })
       .addTo(controller);
+  },
+
+  function() {
+    var width = window.innerWidth,
+      height = window.innerHeight;
+
+    var main = document.querySelector(".main");
+
+    if (width >= 768) {
+      main.classList.toggle(".none");
+    }
   },
 };
 </script>
@@ -409,7 +502,6 @@ body {
   z-index: 2;
 }
 
-
 .container {
   margin: 0 auto;
   overflow: hidden;
@@ -442,6 +534,22 @@ body {
   text-align: center;
 }
 
+.message1 {
+  position: absolute;
+  opacity: 0;
+  top: 40%;
+  left: 20%;
+  right: 20%;
+  z-index: 4;
+}
+
+.message1 img {
+  margin: auto;
+  align-self: center;
+  max-width: 40%;
+  height: auto;
+}
+
 .color {
   position: absolute;
   min-height: 50vh;
@@ -451,6 +559,16 @@ body {
   width: 100%;
   background: #284f75;
   background-blend-mode: multiply;
+}
+
+.color2 {
+  position: absolute;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  width: 100%;
+  background: #284f75;
+  mix-blend-mode: multiply;
 }
 
 .container2 {
@@ -471,13 +589,11 @@ body {
   justify-content: center;
   flex-direction: column;
   padding: 1rem;
-  right: -20rem;
+  left: 20rem;
   opacity: 1;
-
-
 }
 
-.fix{
+.fix {
   display: flex;
   align-items: flex-end;
 }
@@ -594,5 +710,13 @@ body {
 
 .links {
   padding-top: 15px;
+}
+
+.colorChange {
+  color: #c41155;
+}
+
+.none {
+  display: none;
 }
 </style>
