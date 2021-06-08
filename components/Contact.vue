@@ -1,7 +1,7 @@
 <template>
   <div class="contact">
     <div id="cv" class="cv">
-      <img class="cvPhoto" id="cvPhoto" src="../static/cv.png" alt="" />
+      <img class="cvPhoto" id="cvPhoto" src="/cv.png" alt="" />
       <p>
         <span style="color: #000000"><strong>Formaci&oacute;n</strong></span
         ><br /><span style="color: #808080"
@@ -51,9 +51,9 @@
       </p>
     </div>
     <div id="closer1" class="contact_item">
-      <img class="logo" src="../static/contact.png" alt="" />
+      <img class="logo" src="/contact.png" alt="" />
     </div>
-    <span id="closer2" class="contact_item closerText"><img src="../static/message2.gif" alt=""></span>
+    <span id="closer2" class="contact_item closerText"><img src="/message2.gif" alt=""></span>
 
   </div>
 </template>

@@ -32,12 +32,12 @@
         jazz and funk, pretty landscapes, and early internet aesthetics.</span
       >
       <div id="fadeInHover" class="color"></div>
-      <img class="illust" src="../static/2.jpg" alt="" />
+      <img class="illust" src="/2.jpg" alt="" />
     </div>
     <div class="container2">
       <span id="animate1">
         <span id="message1" class="message1"
-          ><img src="../static/message1.gif" alt=""
+          ><img src="/message1.gif" alt=""
         /></span>
         <div id="fadeInHover2" class="color2"></div>
         <Illust />
@@ -45,7 +45,7 @@
     </div>
     <div class="container3">
       <span
-        ><img id="fadeIn3" class="illust" src="../static/9.jpg" alt=""
+        ><img id="fadeIn3" class="illust" src="/9.jpg" alt=""
       /></span>
 
       <div class="box" id="slideTxt1">
@@ -57,7 +57,7 @@
     </div>
     <div class="container4">
       <span>
-        <img id="fadeIn4" class="illust fix" src="../static/4.jpg" alt="" />
+        <img id="fadeIn4" class="illust fix" src="/4.jpg" alt="" />
       </span>
       <span class="text2" id="slideTxt2">
         Freelancer with previous experience as a children's book illustrator and
@@ -68,17 +68,17 @@
       <span class="text4" id="slideTxt4">
         Clients include Manos Unidas and independent publishers.
       </span>
-      <img id="fadeIn5" class="illust" src="../static/5.jpg" alt="" />
+      <img id="fadeIn5" class="illust" src="/5.jpg" alt="" />
     </div>
     <div class="container6">
-      <img id="fadeIn6" class="illust" src="../static/6.jpeg" alt="" />
+      <img id="fadeIn6" class="illust" src="/6.jpeg" alt="" />
       <span class="text5" id="slideTxt5">
         Specializes in background art and is involved in the process of
         establishing color, style, and mood of a scene.
       </span>
     </div>
     <div class="container7">
-      <img id="fadeIn7" class="illust" src="../static/6.5.jpeg" alt="" />
+      <img id="fadeIn7" class="illust" src="/6.5.jpeg" alt="" />
       <span class="text6" id="slideTxt6">
         Is able to create work in a variety of styles showing strong attention
         to detail. <br />
@@ -88,10 +88,10 @@
     </div>
     <div class="container8">
       <span
-        ><img id="fadeIn8" class="illust" src="../static/8.jpg" alt="" />
+        ><img id="fadeIn8" class="illust" src="/8.jpg" alt="" />
       </span>
       <span>
-        <img id="fadeIn9" class="illust" src="../static/7.jpg" alt="" />
+        <img id="fadeIn9" class="illust" src="/7.jpg" alt="" />
       </span>
     </div>
     <div class="container9">
