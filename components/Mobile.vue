@@ -6,7 +6,6 @@
         :icon="{ prefix: 'fas', iconName: 'bars' }"
     /></a>
     
-    <div class="cl"  onclick="myFunction()">click</div>
     <DropdownMenu />
   </div>
 </template>
