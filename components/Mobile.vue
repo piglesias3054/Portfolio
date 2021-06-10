@@ -12,7 +12,7 @@
 
 <script>
 import index from "../pages/index.vue";
-import DropdownMenu from "../pages/index.vue";
+import DropdownMenu from "../components/DropdownMenu.vue";
 export default {
     components: { index, DropdownMenu},
  myFunction() {
@@ -25,6 +25,7 @@ export default {
 </script>
 
 <style>
+
 .show {
   visibility: visible;
 }

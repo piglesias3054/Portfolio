@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="header_item">
-      <img class="logo" src="/logo3.gif" alt="" />
+      <img class="logo" src="../static/logo3.gif" alt="" />
       
     </div>
   </div>
@@ -23,11 +23,7 @@ export default {};
   padding: 0.5rem;
 }
 
-.illust {
-  width: 100%;
-  height: auto;
-  
-}
+
 
 .logo {
   width: 100%;

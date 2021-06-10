@@ -1,16 +1,16 @@
 <template>
-  <div id="desktop" class="desktop">
+  <div id="mobileSection" class="mobileSection">
     <div class="qr"><span class="text1">CV</span></div>
-    <div class="desk20 container1">
-      <span class="deskFont text1" id="slideTxt">
+    <div class="container1">
+      <span class="text1" id="slideTxt">
         Hey, I’m Paula!<br />
         I’m a graphic designer and illustrator based in Madrid. I love classic
         jazz and funk, pretty landscapes, and early internet aesthetics.</span
       >
-      <div id="fadeInHover" class="desk20 color"></div>
+      <div id="fadeInHover" class="color"></div>
       <img class="illust" src="/2.jpg" alt="" />
     </div>
-    <div class="desk container2">
+    <div class="res container2">
       <span id="animate1">
         <span id="message1" class="message1"
           ><img src="/message1.gif" alt=""
@@ -19,54 +19,54 @@
         <Illust />
       </span>
     </div>
-    <div class="desk container3">
+    <div class="res container3">
       <span><img id="fadeIn3" class="illust" src="/9.jpg" alt="" /></span>
 
       <div class="box" id="slideTxt1">
-        <div class="deskFont text3_title">
+        <div class="text3_title">
           I love telling stories through my work, and conveying a sense of
           adventure!
         </div>
       </div>
     </div>
-    <div class="desk deskImage container4">
+    <div class="res resImage container4">
       <span>
         <img id="fadeIn4" class="illust fix" src="/4.jpg" alt="" />
       </span>
-      <span class="deskFont text2" id="slideTxt2">
+      <span class="text2" id="slideTxt2">
         Freelancer with previous experience as a children's book illustrator and
         published works!
       </span>
     </div>
-    <div class="desk container5">
-      <span class="deskFont text4" id="slideTxt4">
+    <div class="res container5">
+      <span class="text4" id="slideTxt4">
         Clients include Manos Unidas and independent publishers.
       </span>
       <img id="fadeIn5" class="illust" src="/5.jpg" alt="" />
     </div>
-    <div class="desk deskImage container6">
+    <div class="res resImage container6">
       <img id="fadeIn6" class="illust" src="/6.jpeg" alt="" />
-      <span class="deskFont text5" id="slideTxt5">
+      <span class="text5" id="slideTxt5">
         Specializes in background art and is involved in the process of
         establishing color, style, and mood of a scene.
       </span>
     </div>
-    <div class="desk deskImage container7">
+    <div class="res resImage container7">
       <img id="fadeIn7" class="illust" src="/6.5.jpeg" alt="" />
-      <span class="deskFont text6" id="slideTxt6">
+      <span class="text6" id="slideTxt6">
         Is able to create work in a variety of styles showing strong attention
         to detail. <br />
         Understands architecture, has good awareness of city spaces and
         countryside landscapes.</span
       >
     </div>
-    <div class="desk container8">
+    <div class="res container8">
       <span><img id="fadeIn8" class="illust" src="/8.jpg" alt="" /> </span>
       <span>
         <img id="fadeIn9" class="illust" src="/7.jpg" alt="" />
       </span>
     </div>
-    <div class="desk container9"></div>
+    <div class="res container9"></div>
     <div class="closer">
       <Contact />
     </div>
@@ -270,7 +270,7 @@ export default {
       .addTo(controller);
 
     var scene = new this.$scrollmagic.Scene({
-      triggerElement: ".container5",
+      triggerElement: ".container6",
     })
       .setTween("#fadeIn5", 1, {
         scale: 1,
@@ -281,7 +281,7 @@ export default {
     // CONTAINER 6
 
     var fadein6 = new this.$scrollmagic.Scene({
-      triggerElement: ".container4",
+      triggerElement: ".container6",
     })
       .setTween("#fadeIn6", 2, {
         scale: 1.1,
@@ -289,17 +289,17 @@ export default {
       .addTo(controller);
 
     var slideTxt5 = new this.$scrollmagic.Scene({
-      triggerElement: ".container4",
+      triggerElement: ".container6",
     })
       .setTween("#slideTxt5", 3, {
         scale: 1.1,
-        right: 90,
+        right: 230,
         opacity: 1,
       })
       .addTo(controller);
 
     var scene = new this.$scrollmagic.Scene({
-      triggerElement: ".container4",
+      triggerElement: ".container7",
     })
       .setTween("#fadeIn6", 1, {
         scale: 1,
@@ -312,42 +312,12 @@ export default {
 };
 </script>
 
-
-
 <style lang="scss">
-.desk20 {
-  min-height: 50vh;
+.res {
+  max-height: 120vw;
 }
 
-.deskImage {
-  width: 50%;
+.resImage {
+  width: 100%;
 }
-
-.desk50 {
-  min-height: 50vh;
-}
-
-.desk {
-  min-height: 100vh;
-}
-
-.deskFont{
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-}
-
-.box {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 1rem;
-  left: 20rem;
-  opacity: 1;
-}
-
-.text5{
-    color: #7caed4;
-}
-
 </style>
