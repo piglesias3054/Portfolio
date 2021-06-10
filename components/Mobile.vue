@@ -7,7 +7,6 @@
     /></a>
     
     <div class="cl"  onclick="myFunction()">click</div>
-    <div id="ejemplo" >fgdfgdfg</div>
     <DropdownMenu />
   </div>
 </template>
