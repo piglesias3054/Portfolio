@@ -303,6 +303,7 @@ html {
 }
 .res {
   min-height: 90vw;
+  max-height: 90vw;
 }
 
 .resImage {
