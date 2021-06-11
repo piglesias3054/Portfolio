@@ -1,16 +1,16 @@
 <template>
   <div id="mobileSection" class="mobileSection">
     <div class="qr"><span class="text1">CV</span></div>
-    <div class="res container1">
+    <div class="res2 container1">
       <span class="resFont text1" id="slideTxt">
         Hey, I’m Paula!<br />
         I’m a graphic designer and illustrator based in Madrid. I love classic
         jazz and funk, pretty landscapes, and early internet aesthetics.</span
       >
-      <div id="fadeInHover" class="res color"></div>
+      <div id="fadeInHover" class="res2 color"></div>
       <img class="illust" src="/2.jpg" alt="" />
     </div>
-    <div class="res container2">
+    <div class="res2 container2">
       <span id="animate1">
         <span id="message1" class="message1"
           ><img src="/message1.gif" alt=""
@@ -19,7 +19,7 @@
         <Illust />
       </span>
     </div>
-    <div class="res container3">
+    <div class="res2 container3">
       <span
         ><img id="fadeIn3" class="resImage illust" src="/9.jpg" alt=""
       /></span>
@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <div class="res resImage container4 fix1">
+    <div class="res2 resImage container4 fix1">
       <span>
         <img id="fadeIn4" class="illust" src="/4.jpg" alt="" />
       </span>
@@ -40,20 +40,20 @@
         published works!
       </span>
     </div>
-    <div class="res container5">
+    <div class="res2 container5">
       <span class="resFont text4" id="slideTxt4">
         Clients include Manos Unidas and independent publishers.
       </span>
       <img id="fadeIn5" class="illust" src="/5.jpg" alt="" />
     </div>
-    <div class="res resImage container6">
+    <div class="res2 resImage container6">
       <img id="fadeIn6" class="illust" src="/6.jpeg" alt="" />
       <span class="resFont text5" id="slideTxt5">
         Specializes in background art and is involved in the process of
         establishing color, style, and mood of a scene.
       </span>
     </div>
-    <div class="res resImage container7">
+    <div class="res2 resImage container7">
       <img id="fadeIn7" class="illust" src="/6.5.jpeg" alt="" />
       <span class="resFont text6" id="slideTxt6">
         Is able to create work in a variety of styles showing strong attention
@@ -62,7 +62,7 @@
         countryside landscapes.</span
       >
     </div>
-   <div class="res container8">
+   <div class="res2 container8">
       <span class="container8_item"
         ><img id="fadeIn8" class="illust" src="/8.jpg" alt="" />
       </span>
@@ -339,7 +339,7 @@ html {
   max-width: 100vw;
   overflow-x: hidden;
 }
-.res {
+.res2 {
   min-height: 120vw;
 
 }
