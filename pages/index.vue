@@ -51,72 +51,21 @@ export default {
     
     // CONTAINER 7
 
-    var slideTxt6 = new this.$scrollmagic.Scene({
-      triggerElement: ".container7",
-    })
-      .setTween("#slideTxt6", 3, {
-        scale: 1.1,
-        right: 230,
-        opacity: 1,
-      })
-      .addTo(controller);
+    
 
-    var fadein7 = new this.$scrollmagic.Scene({
-      triggerElement: ".container7",
-    })
-      .setTween("#fadeIn7", 2, {
-        scale: 1.1,
-      })
-
-      .addTo(controller);
-
-    var scene = new this.$scrollmagic.Scene({
-      triggerElement: ".container8",
-    })
-      .setTween("#fadeIn7", 1, {
-        scale: 1,
-      })
-
-      .addTo(controller);
-
-    // CONTAINER 8
-
-    var fadein8 = new this.$scrollmagic.Scene({
-      triggerElement: ".container8",
-    })
-      .setTween("#fadeIn8, #fadeIn9", 2, {
-        scale: 1.1,
-      })
-      .addTo(controller);
-  },
-
-  function() {
-    var width = window.innerWidth,
-      height = window.innerHeight;
-
-    var main = document.querySelector(".main");
-
-    if (width >= 768) {
-      main.classList.toggle(".none");
-    }
-  },
-};
+  }}
 </script>
 
 <style lang="scss">
 html,
 body {
-  max-width: 100%;
-  overflow-x: hidden;
+  min-width: 100vw;
+  max-width: 100vw;
+  padding: 0;
+  overflow-x: clip;
+  margin: 0;
 }
 
-.qr {
-  margin: 1rem;
-}
-
-.qr img {
-  max-height: 4rem;
-}
 
 .socials {
   display: flex;
@@ -195,7 +144,6 @@ body {
   max-width: 15rem;
   font-style: normal;
   font-weight: 300;
-  color: #7caed4;
   right: -20rem;
   padding-top: 8rem;
   opacity: 0.5;
@@ -205,7 +153,7 @@ body {
 .container {
   margin: 0 auto;
   overflow: hidden;
-  min-height: 50vh;
+  min-height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;

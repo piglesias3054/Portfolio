@@ -62,13 +62,12 @@
         countryside landscapes.</span
       >
     </div>
-    <div class="res container8">
-      <span><img id="fadeIn8" class="illust" src="/8.jpg" alt="" /> </span>
-      <span>
-        <img id="fadeIn9" class="illust" src="/7.jpg" alt="" />
+   <div class="res container8">
+      <span class="res container8_item"
+        ><img id="fadeIn8" class="illust" src="/8.jpg" alt="" />
       </span>
-    </div>
-    <div class="res container9"></div>
+
+   </div>
     <div class="closer">
       <Contact />
     </div>
@@ -292,6 +291,63 @@ export default {
       .addTo(controller);
 
     // CONTAINER 7
+
+    // CONTAINER 7
+
+    var slideTxt6 = new this.$scrollmagic.Scene({
+      triggerElement: ".container7",
+    })
+      .setTween("#slideTxt6", 3, {
+        scale: 1.2,
+        right: 70,
+        opacity: 1,
+      })
+      .addTo(controller);
+
+    var fadein7 = new this.$scrollmagic.Scene({
+      triggerElement: ".container7",
+    })
+      .setTween("#fadeIn7", 2, {
+        scale: 1.1,
+      })
+
+      .addTo(controller);
+
+    var scene = new this.$scrollmagic.Scene({
+      triggerElement: ".container8",
+      duration: 300,
+    })
+      .setTween("#fadeIn7", 1, {
+        scale: 1,
+      })
+
+      .addTo(controller);
+
+    // CONTAINER 8
+
+       var fadein8 = new this.$scrollmagic.Scene({
+      triggerElement: ".container8",
+    })
+      .setTween("#fadeIn8", 2, {
+        scale: 1.1,
+      })
+
+      .addTo(controller);
+
+    var scene = new this.$scrollmagic.Scene({
+      triggerElement: "#cv",
+      duration: 300,
+    })
+      .setTween("#fadeIn8", 1, {
+        scale: 1,
+      })
+
+      .addTo(controller);
+
+
+  
+
+  
   },
 };
 </script>
@@ -303,7 +359,7 @@ html {
 }
 .res {
   min-height: 90vw;
-  max-height: 90vw;
+
 }
 
 .resImage {
@@ -335,5 +391,22 @@ html {
 
 .colorChangeWhite {
   color: white;
+}
+
+.container8{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container8_item2 {
+     object-fit: cover;
+    padding: 0;
+  height: 80rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 3;
 }
 </style>

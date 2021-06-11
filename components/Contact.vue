@@ -2,7 +2,7 @@
   <div class="contact">
     <div id="cv" class="cv">
       <img class="cvPhoto" id="cvPhoto" src="/cv.png" alt="" />
-      <p>
+      <p class="cv_text">
         <span style="color: #000000"><strong>Formaci&oacute;n</strong></span
         ><br /><span style="color: #808080"
           ><em>Dise&ntilde;o Gr&aacute;fico / ESDMadrid</em></span
@@ -50,11 +50,16 @@
         >
       </p>
     </div>
-    <div id="closer1" class="contact_item">
-      <img class="logo" src="/contact.png" alt="" />
+    <div class="backgroundWhite">
+      <div class="contact_end">
+        <div id="closer1" class="contact_item ">
+          <img class="logo" src="/contact.png" alt="" />
+        </div>
+        <div id="closer2" class="contact_item">
+          <img class="logo" src="/message2.gif" alt="" />
+        </div>
+      </div>
     </div>
-    <span id="closer2" class="contact_item closerText"><img src="/message2.gif" alt=""></span>
-
   </div>
 </template>
 
@@ -80,30 +85,52 @@ export default {
       })
       .addTo(controller);
 
-      var CV = new this.$scrollmagic.Scene({
+    var CV = new this.$scrollmagic.Scene({
       triggerElement: ".cv",
     })
       .setTween("#cv", 4, {
         opacity: 1,
       })
       .addTo(controller);
+
+    var pinIntro = new this.$scrollmagic.Scene({
+      triggerElement: "#cv",
+      triggerHook: 0,
+    })
+      .setPin("#cv")
+      .addTo(controller);
   },
-
-  
 };
-
-
 </script>
 
 <style>
-.cv {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+#cv[style] {
+  justify-content: center !important;
+  height: auto !important;
+  width: auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+#cv {
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-align: left;
+  left: 0;
   padding-top: 10rem;
   display: flex;
   justify-content: center;
   align-items: top;
   opacity: 0;
+  margin-top: 0rem;
+}
+
+.cv_text{
+  font-size: 0.8rem;
+  padding-right: 1rem;
 }
 
 .cvPhoto {
@@ -114,7 +141,7 @@ export default {
 
 .contact {
   background-color: solid white;
-  padding: 0;
+  margin-top: 15rem;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -123,11 +150,25 @@ export default {
 }
 
 .contact_item {
-  padding: 0.5rem;
-  margin-top: 20rem;
   opacity: 0.1;
-  max-width: 40%;
   align-self: center;
+  margin-bottom: 20rem;
+}
+
+
+.backgroundWhite {
+  background-color: #ffffff;
+  margin-top: 10rem;
+  width: 100vw;
+  z-index: 3;
+  height: 100rem;
+}
+
+.contact_end {
+  flex-direction: column;
+  justify-content: center;
+  justify-self: center;
+  margin-top: 40rem;
 }
 
 .closerText {
@@ -144,13 +185,10 @@ export default {
   z-index: 2;
 }
 
-.logo {
-  width: 100%;
-  height: auto;
+.contact_item img {
+  max-width: 20rem !important;
+  max-height: auto !important;
+  align-self: center;
 }
 
-.contact_item img {
-  height: auto;
-  width: 80%;
-}
 </style>

@@ -27,6 +27,9 @@
           I love telling stories through my work, and conveying a sense of
           adventure!
         </div>
+        <div class="message3">
+          <img class="illust" src="/message3.gif" alt="" />
+        </div>
       </div>
     </div>
     <div class="desk deskImage container4">
@@ -36,6 +39,7 @@
       <span class="deskFont text2" id="slideTxt2">
         Freelancer with previous experience as a children's book illustrator and
         published works!
+          <img class="message5 illust" src="/message5.gif" alt="" />
       </span>
     </div>
     <div class="desk container5">
@@ -53,16 +57,22 @@
     </div>
     <div class="desk deskImage container7">
       <img id="fadeIn7" class="illust" src="/6.5.jpeg" alt="" />
-      <span class="deskFont text6" id="slideTxt6">
+      <span class="deskFont white text6" id="slideTxt6">
         Is able to create work in a variety of styles showing strong attention
         to detail. <br />
         Understands architecture, has good awareness of city spaces and
-        countryside landscapes.</span
-      >
+        countryside landscapes.
+        <div class="message4">
+          <img class="illust" src="/message3.gif" alt="" /></div
+      ></span>
     </div>
+
     <div class="desk container8">
-      <span><img id="fadeIn8" class="illust" src="/8.jpg" alt="" /> </span>
-      <span>
+      <span class="container8_item"
+        ><img id="fadeIn8" class="illust" src="/8.jpg" alt="" />
+      </span>
+
+      <span class="container8_item2">
         <img id="fadeIn9" class="illust" src="/7.jpg" alt="" />
       </span>
     </div>
@@ -140,6 +150,7 @@ export default {
       .setTween("#slideTxt1", 3, {
         scale: 1.1,
         weight: 300,
+        left: 250,
         opacity: 1,
       })
       .addTo(controller);
@@ -281,7 +292,7 @@ export default {
     // CONTAINER 6
 
     var fadein6 = new this.$scrollmagic.Scene({
-      triggerElement: ".container4",
+      triggerElement: ".container5",
     })
       .setTween("#fadeIn6", 2, {
         scale: 1.1,
@@ -293,13 +304,13 @@ export default {
     })
       .setTween("#slideTxt5", 3, {
         scale: 1.1,
-        right: 90,
+        right: 200,
         opacity: 1,
       })
       .addTo(controller);
 
     var scene = new this.$scrollmagic.Scene({
-      triggerElement: ".container4",
+      triggerElement: ".container5",
     })
       .setTween("#fadeIn6", 1, {
         scale: 1,
@@ -308,6 +319,45 @@ export default {
       .addTo(controller);
 
     // CONTAINER 7
+
+    var slideTxt6 = new this.$scrollmagic.Scene({
+      triggerElement: ".container7",
+    })
+      .setTween("#slideTxt6", 3, {
+        scale: 1.2,
+        right: 200,
+        opacity: 1,
+      })
+      .addTo(controller);
+
+    var fadein7 = new this.$scrollmagic.Scene({
+      triggerElement: ".container7",
+    })
+      .setTween("#fadeIn7", 2, {
+        scale: 1.1,
+      })
+
+      .addTo(controller);
+
+    var scene = new this.$scrollmagic.Scene({
+      triggerElement: ".container8",
+      duration: 300,
+    })
+      .setTween("#fadeIn7", 1, {
+        scale: 1,
+      })
+
+      .addTo(controller);
+
+    // CONTAINER 8
+
+    var pinArt = new this.$scrollmagic.Scene({
+      triggerElement: "#fadeIn9",
+      duration: 1200,
+      triggerHook: 600,
+    })
+      .setPin("#fadeIn8")
+      .addTo(controller);
   },
 };
 </script>
@@ -331,7 +381,7 @@ export default {
   min-height: 100vh;
 }
 
-.deskFont{
+.deskFont {
   font-size: 1.2rem;
   line-height: 1.5rem;
 }
@@ -340,14 +390,58 @@ export default {
   position: absolute;
   display: flex;
   justify-content: center;
-  flex-direction: column;
   padding: 1rem;
   left: 20rem;
   opacity: 1;
 }
 
-.text5{
-    color: #7caed4;
+.text5 {
+  color: #7caed4;
 }
 
+.white {
+  color: white;
+}
+
+.container8_item {
+  height: 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.message3 {
+  z-index: 0;
+  position: absolute;
+  width: 140%;
+  top: -13rem;
+  left: -3rem;
+}
+
+.message4 {
+  z-index: 0;
+  position: absolute;
+  width: 140%;
+  top: -5rem;
+  left: -3rem;
+}
+
+
+.message5 {
+  z-index: 0;
+  position: absolute;
+  width: 160%;
+  top: -10rem;
+  left: 0rem;
+}
+
+.container8_item2 {
+  height: 80rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 3;
+}
 </style>

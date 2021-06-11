@@ -6,7 +6,7 @@
         :icon="{ prefix: 'fas', iconName: 'bars' }"
     /></a>
     
-    <DropdownMenu />
+
   </div>
 </template>
 
@@ -26,25 +26,5 @@ export default {
 
 <style>
 
-.show {
-  visibility: visible;
-}
-.hide {
-  visibility: hidden;
-}
 
-.orange {
-  background: red;
-}
-
-.yellow {
-  background: blue;
-}
-
-.div {
-  width: 100px;
-  height: 100px;
-  display: inline-block;
-  border: 1px solid black;
-}
 </style>
