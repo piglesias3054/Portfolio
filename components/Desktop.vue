@@ -281,7 +281,7 @@ export default {
       .addTo(controller);
 
     var scene = new this.$scrollmagic.Scene({
-      triggerElement: ".container5",
+      triggerElement: ".container6",
     })
       .setTween("#fadeIn5", 1, {
         scale: 1,
@@ -292,7 +292,7 @@ export default {
     // CONTAINER 6
 
     var fadein6 = new this.$scrollmagic.Scene({
-      triggerElement: ".container5",
+      triggerElement: ".container6",
     })
       .setTween("#fadeIn6", 2, {
         scale: 1.1,
@@ -310,7 +310,7 @@ export default {
       .addTo(controller);
 
     var scene = new this.$scrollmagic.Scene({
-      triggerElement: ".container5",
+      triggerElement: ".container7",
     })
       .setTween("#fadeIn6", 1, {
         scale: 1,
