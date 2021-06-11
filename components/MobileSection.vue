@@ -96,7 +96,7 @@ export default {
     // CONTAINER 1
 
     var fadeIn = new this.$scrollmagic.Scene({
-      triggerElement: ".container",
+      triggerElement: ".container1",
     })
       .setTween("#fadeIn", 2, {
         scale: 1.1,
