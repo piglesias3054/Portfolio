@@ -349,11 +349,7 @@ html {
   height: 120;
 }
 
-.resFont {
-  font-size: 2rem;
-  width: 9.5rem;
-   color: #ffffff;
-}
+
 
 .box {
   position: absolute;
